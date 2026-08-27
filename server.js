@@ -8,11 +8,19 @@ server.get('/', (req, res) => {
 });
 
 server.get('/users', (req, res) => {
-    return 'Listagem de usuarios';
+    const { nome, email, telefone } = req.query
+    return `Listagem de usuarios filtro nome: ${nome}, email: ${email}, telefone: ${telefone}`;
 });
 
 server.post('/users', (req, res) => {
-    return 'ainda nao implementado';
+
+    const { nome, email, telefone } = req.body;
+    return `Usuario criado: ${nome}, ${email}, ${telefone}`;
+});
+
+server.get('/users/:id', (req, res) => {
+    const id = req.params.id
+    return `Detalhes do usuario com ID ${id}`;
 });
 
 server.put('/users/:id', (req, res) => {
