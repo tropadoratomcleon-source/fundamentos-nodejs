@@ -13,6 +13,7 @@
   "type": "module",
   "dependencies": {
     "fastify": "^5.12.1",
+    "mysql2": "^3.24.2",
     "uuid": "^14.0.2"
   },
   "devDependencies": {
